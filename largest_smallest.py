@@ -25,4 +25,4 @@ print("Maximum is", largest)
 print("Minimum is", smallest)
 
 
-print(format(a1, '.2f')) #to add precision to a float
+# print(format(a1, '.2f')) #to add precision to a float
