@@ -1,0 +1,27 @@
+'''
+Given 2 strings P,Q of length N,M generate a password from two strings by combining corresponding index letter of each string.If the any one string is less than the other then numbers starting from1,2,3.... are taken to equate the length of the strings.
+Explanation:If the strings are Abi & Bhuvana then the password is ABbhiu1v2a3n4a-
+Input Size : 1 <= N, M <= 100000
+Sample Testcase :
+INPUT
+Vishal Yadav
+OUTPUT
+VYiasdhavl1
+'''
+
+from itertools import zip_longest
+a,b=input().split()
+i=1
+s=""
+
+for x,y in list(zip_longest(a,b)):
+    if x is not None and y is not None:
+        s+=x+y
+    elif x is None and len(a)<len(b):
+        s+=str(i)+y
+        i+=1
+    elif y is None and len(a)>len(b):
+        s+=x+str(i)
+        i+=1
+
+print(s)
