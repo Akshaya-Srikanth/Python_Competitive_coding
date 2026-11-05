@@ -1,0 +1,12 @@
+def perfect(number):
+    sum_of_factors = 0
+    
+    for i in range(1, number):
+        if number % i == 0:
+            sum_of_factors += i
+    
+    return sum_of_factors == number
+
+for num in range(1, 1001):
+  if perfect(num):
+    print(num)

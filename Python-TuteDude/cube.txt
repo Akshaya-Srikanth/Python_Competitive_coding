@@ -1,0 +1,6 @@
+lst=[1,2,3]
+lst_new=[]
+
+for x in lst:
+  lst_new.append((x,x**3))
+print("New list with cubes of numbers:",lst_new)

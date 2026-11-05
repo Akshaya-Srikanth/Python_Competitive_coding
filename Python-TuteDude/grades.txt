@@ -1,0 +1,21 @@
+def get_grade(marks):
+    if marks < 25:
+        return 'F'
+    elif 25 <= marks < 45:
+        return 'E'
+    elif 45 <= marks < 50:
+        return 'D'
+    elif 50 <= marks < 60:
+        return 'C'
+    elif 60 <= marks < 80:
+        return 'B'
+    elif marks >= 80:
+        return 'A'
+    else:
+        return 'Invalid marks'
+
+marks = int(input("Enter your marks: "))
+
+grade = get_grade(marks)
+
+print(f"Your grade is: {grade}")

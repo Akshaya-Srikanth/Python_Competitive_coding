@@ -1,0 +1,18 @@
+def division_program():
+    try:
+     
+        a = float(input("Enter the numerator (a): "))
+        b = float(input("Enter the denominator (b): "))
+        
+        
+        result = a / b
+          
+        print(f"{a} divided by {b} is equal to {result}")
+    
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed. Please enter a non-zero denominator.")
+    
+    except ValueError:
+        print("Error: Invalid input. Please enter numeric values.")
+
+division_program()

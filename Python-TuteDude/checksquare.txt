@@ -1,0 +1,8 @@
+l = input('Enter the length of rectangle: ')
+b = input('Enter the breadth of rectangle: ')
+
+if l == b:
+  print('It is a square')
+
+else:
+  print('It is not a square')

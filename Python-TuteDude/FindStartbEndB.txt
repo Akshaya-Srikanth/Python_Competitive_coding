@@ -1,0 +1,8 @@
+import re
+l=["Akshab","ARam", "Arab"]
+pattern=r'a.*b'
+
+for x in l:
+  match=re.findall(pattern,x)
+  if match:
+    print(x)

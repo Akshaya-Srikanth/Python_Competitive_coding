@@ -1,0 +1,5 @@
+string1 = "123456"
+string2 = "123abc"
+
+print(f"Does '{string1}' contain only numbers? {string1.isdigit()}")
+print(f"Does '{string2}' contain only numbers? {string2.isdigit()}")

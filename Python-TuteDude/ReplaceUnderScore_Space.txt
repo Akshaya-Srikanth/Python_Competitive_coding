@@ -1,0 +1,12 @@
+def replace_spaces_and_underscores(text):
+    underscored_text = text.replace(' ', '_')
+    space_replaced_text = underscored_text.replace('_', ' ')
+    
+    return underscored_text, space_replaced_text
+
+input_text = "Hello world, how are you?"
+underscored, space_replaced = replace_spaces_and_underscores(input_text)
+
+print("Original text:", input_text)
+print("Text with spaces replaced by underscores:", underscored)
+print("Text with underscores replaced by spaces:", space_replaced)

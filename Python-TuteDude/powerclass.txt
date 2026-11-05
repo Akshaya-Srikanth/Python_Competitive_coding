@@ -1,0 +1,16 @@
+class Power:
+    def __init__(self, base, exponent):
+        self.base = base
+        self.exponent = exponent
+
+    def calculate(self):
+        result = 1
+        for x in range(abs(self.exponent)):
+            result *= self.base
+        if self.exponent < 0:
+            result = 1 / result
+        return result
+
+# Example O/P:
+power = Power(2, 3)
+print(f"2^3 = {power.calculate()}")  # Output: 8

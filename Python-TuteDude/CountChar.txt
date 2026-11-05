@@ -1,0 +1,10 @@
+import re
+
+def count_characters_excluding_numbers(string):
+    pattern = r'[a-zA-Z]'
+    matches = re.findall(pattern, string)
+    return len(matches)
+
+string = "This01"
+length = count_characters_excluding_numbers(string)
+print(f"The length of the string excluding numbers is: {length}")

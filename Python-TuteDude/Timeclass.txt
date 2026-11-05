@@ -1,0 +1,33 @@
+class Time:
+    def __init__(self, hours, minutes):
+        self.hours = hours
+        self.minutes = minutes
+
+    def add_time(self, other):
+        """Add two Time objects and return a new Time object with the result."""
+        total_minutes = self.minutes + other.minutes
+        total_hours = self.hours + other.hours + total_minutes // 60
+        total_minutes = total_minutes % 60
+        return Time(total_hours, total_minutes)
+
+    def display_time(self):
+        """Print the time in hours and minutes."""
+        print(f"{self.hours} hour(s) and {self.minutes} minute(s)")
+
+    def display_minutes(self):
+        """Print the total minutes in the Time object."""
+        total_minutes = self.hours * 60 + self.minutes
+        print(f"{total_minutes} minute(s)")
+
+#O/P:
+time1 = Time(2, 50)
+time2 = Time(1, 20)
+
+# Adding two time objects
+time3 = time1.add_time(time2)
+
+# Displaying time
+time3.display_time()  # Output: 4 hour(s) and 10 minute(s)
+
+# Displaying total minutes for time1
+time1.display_minutes()  # Output: 170 minute(s)
